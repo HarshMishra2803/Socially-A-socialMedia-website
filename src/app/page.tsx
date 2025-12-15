@@ -1,17 +1,20 @@
 import React from "react";
 import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/modetoggle";
 
 const page = () => {
   return (
     <div>
       <SignedOut >
         <SignInButton mode="modal" >
-          <button className="bg-red-500">Sign In</button>
+          <Button>sign in</Button>
         </SignInButton>
       </SignedOut>
       <SignedIn>
         <UserButton />
       </SignedIn>
+      <ModeToggle />
     </div>
   );
 };
